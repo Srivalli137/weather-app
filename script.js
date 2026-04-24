@@ -8,10 +8,14 @@ async function getWeather() {
     const data = await response.json();
 
     if (data.cod == 200) {
-        document.getElementById("result").innerHTML =
-            `Temperature: ${data.main.temp}°C <br>
-             Weather: ${data.weather[0].description}`;
-    } else {
-        document.getElementById("result").innerHTML = "City not found!";
-    }
+    document.getElementById("result").innerHTML = `
+        <div class="weather-box">
+            <p>🌡️ <b>Temp:</b> ${data.main.temp}°C</p>
+            <p>☁️ <b>Weather:</b> ${data.weather[0].description}</p>
+            <p>💧 <b>Humidity:</b> ${data.main.humidity}%</p>
+            <p>⏲️ <b>Pressure:</b> ${data.main.pressure} hPa</p>
+        </div>
+    `;
+} else {
+    document.getElementById("result").innerHTML = "City not found!";
 }

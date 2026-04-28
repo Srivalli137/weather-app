@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brew Haven Coffee Shop - Local Coffee & Pastries</title>
-    <meta name="description" content="Welcome to Brew Haven, your neighborhood coffee shop serving premium coffee, fresh pastries, and a cozy atmosphere in downtown.">
+    <title>Client Lead Management System</title>
+    <meta name="description" content="Professional CRM system for managing client leads and sales pipeline">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <h2>☕ Brew Haven</h2>
+                <h2>🎯 LeadCRM</h2>
             </div>
             <div class="nav-menu">
-                <a href="#home" class="nav-link active">Home</a>
-                <a href="#menu" class="nav-link">Menu</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#dashboard" class="nav-link active">Dashboard</a>
+                <a href="#leads" class="nav-link">All Leads</a>
+                <a href="#add-lead" class="nav-link">Add Lead</a>
+                <a href="#analytics" class="nav-link">Analytics</a>
             </div>
             <div class="nav-toggle">
                 <span></span>
@@ -29,25 +30,312 @@
         </div>
     </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Welcome to Brew Haven</h1>
-            <p>Your neighborhood coffee shop serving premium coffee, fresh pastries, and a cozy atmosphere since 2018.</p>
-            <div class="hero-buttons">
-                <a href="#menu" class="btn btn-primary">View Menu</a>
-                <a href="#contact" class="btn btn-secondary">Reserve Table</a>
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="dashboard">
+        <div class="container">
+            <h1>Lead Management Dashboard</h1>
+            <p>Track and manage your client leads efficiently</p>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="totalLeads">0</h3>
+                        <p>Total Leads</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon new">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="newLeads">0</h3>
+                        <p>New Leads</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon contacted">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="contactedLeads">0</h3>
+                        <p>Contacted</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon qualified">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="qualifiedLeads">0</h3>
+                        <p>Qualified</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600&h=400&fit=crop" alt="Cozy coffee shop interior">
+
+            <!-- Recent Leads -->
+            <div class="recent-leads">
+                <h2>Recent Leads</h2>
+                <div id="recentLeadsList" class="leads-list">
+                    <p class="empty-state">No leads yet. <a href="#add-lead">Add your first lead</a></p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Menu Section -->
-    <section id="menu" class="menu">
+    <!-- All Leads Section -->
+    <section id="leads" class="leads-section">
         <div class="container">
-            <h2>Our Menu</h2>
+            <div class="section-header">
+                <h2>All Leads</h2>
+                <div class="search-filter">
+                    <input type="text" id="searchInput" placeholder="Search leads..." class="search-input">
+                    <select id="statusFilter" class="filter-select">
+                        <option value="all">All Status</option>
+                        <option value="new">New</option>
+                        <option value="contacted">Contacted</option>
+                        <option value="qualified">Qualified</option>
+                        <option value="proposal">Proposal Sent</option>
+                        <option value="negotiation">Negotiation</option>
+                        <option value="closed">Closed Won</option>
+                        <option value="lost">Closed Lost</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="leadsContainer" class="leads-container">
+                <div class="empty-state">
+                    <i class="fas fa-users"></i>
+                    <h3>No leads found</h3>
+                    <p>Start by adding your first lead to the system.</p>
+                    <a href="#add-lead" class="btn btn-primary">Add Lead</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add Lead Section -->
+    <section id="add-lead" class="add-lead-section">
+        <div class="container">
+            <div class="form-container">
+                <h2>Add New Lead</h2>
+                <form id="leadForm" class="lead-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="company">Company</label>
+                            <input type="text" id="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="jobTitle">Job Title</label>
+                            <input type="text" id="jobTitle">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="leadSource">Lead Source</label>
+                        <select id="leadSource">
+                            <option value="website">Website</option>
+                            <option value="referral">Referral</option>
+                            <option value="social-media">Social Media</option>
+                            <option value="cold-call">Cold Call</option>
+                            <option value="email">Email Campaign</option>
+                            <option value="trade-show">Trade Show</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Notes</label>
+                        <textarea id="notes" rows="4" placeholder="Additional information about this lead..."></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Add Lead</button>
+                        <button type="button" id="clearForm" class="btn btn-secondary">Clear Form</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analytics Section -->
+    <section id="analytics" class="analytics-section">
+        <div class="container">
+            <h2>Lead Analytics</h2>
+            <div class="analytics-grid">
+                <div class="analytics-card">
+                    <h3>Lead Sources</h3>
+                    <canvas id="sourceChart"></canvas>
+                </div>
+                <div class="analytics-card">
+                    <h3>Conversion Funnel</h3>
+                    <div id="funnelChart" class="funnel-container">
+                        <div class="funnel-step">
+                            <span class="funnel-label">Total Leads</span>
+                            <div class="funnel-bar">
+                                <div class="funnel-fill" id="funnelTotal" style="width: 100%"></div>
+                            </div>
+                            <span class="funnel-number" id="funnelTotalNum">0</span>
+                        </div>
+                        <div class="funnel-step">
+                            <span class="funnel-label">Contacted</span>
+                            <div class="funnel-bar">
+                                <div class="funnel-fill contacted" id="funnelContacted" style="width: 0%"></div>
+                            </div>
+                            <span class="funnel-number" id="funnelContactedNum">0</span>
+                        </div>
+                        <div class="funnel-step">
+                            <span class="funnel-label">Qualified</span>
+                            <div class="funnel-bar">
+                                <div class="funnel-fill qualified" id="funnelQualified" style="width: 0%"></div>
+                            </div>
+                            <span class="funnel-number" id="funnelQualifiedNum">0</span>
+                        </div>
+                        <div class="funnel-step">
+                            <span class="funnel-label">Closed Won</span>
+                            <div class="funnel-bar">
+                                <div class="funnel-fill closed" id="funnelClosed" style="width: 0%"></div>
+                            </div>
+                            <span class="funnel-number" id="funnelClosedNum">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Detail Modal -->
+    <div id="leadModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Lead Details</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="leadDetails"></div>
+                <div class="modal-actions">
+                    <button id="editLeadBtn" class="btn btn-secondary">Edit Lead</button>
+                    <button id="deleteLeadBtn" class="btn btn-danger">Delete Lead</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Lead Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Edit Lead</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="editLeadForm" class="lead-form">
+                    <input type="hidden" id="editLeadId">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="editFirstName">First Name *</label>
+                            <input type="text" id="editFirstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editLastName">Last Name *</label>
+                            <input type="text" id="editLastName" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="editEmail">Email *</label>
+                            <input type="email" id="editEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editPhone">Phone</label>
+                            <input type="tel" id="editPhone">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="editCompany">Company</label>
+                            <input type="text" id="editCompany">
+                        </div>
+                        <div class="form-group">
+                            <label for="editJobTitle">Job Title</label>
+                            <input type="text" id="editJobTitle">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="editStatus">Status</label>
+                            <select id="editStatus">
+                                <option value="new">New</option>
+                                <option value="contacted">Contacted</option>
+                                <option value="qualified">Qualified</option>
+                                <option value="proposal">Proposal Sent</option>
+                                <option value="negotiation">Negotiation</option>
+                                <option value="closed">Closed Won</option>
+                                <option value="lost">Closed Lost</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="editSource">Lead Source</label>
+                            <select id="editSource">
+                                <option value="website">Website</option>
+                                <option value="referral">Referral</option>
+                                <option value="social-media">Social Media</option>
+                                <option value="cold-call">Cold Call</option>
+                                <option value="email">Email Campaign</option>
+                                <option value="trade-show">Trade Show</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="editNotes">Notes</label>
+                        <textarea id="editNotes" rows="4"></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Update Lead</button>
+                        <button type="button" id="cancelEdit" class="btn btn-secondary">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
             <p>Freshly brewed coffee and handcrafted pastries made daily</p>
 
             <div class="menu-categories">

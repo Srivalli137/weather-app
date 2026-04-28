@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gnana Srivalli - Full Stack Developer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-brand">
+        <h2>Gnana Srivalli</h2>
+      </div>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1 class="fade-in">Full Stack Web Developer</h1>
+      <p class="fade-in delay-1">Building modern, responsive web applications with clean code</p>
+      <a href="#projects" class="cta-button fade-in delay-2">View My Work</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>I'm a passionate full-stack developer with a strong foundation in front-end and back-end technologies. I specialize in building responsive, user-friendly web applications that solve real-world problems.</p>
+          <p>With expertise in HTML, CSS, JavaScript, and modern web frameworks, I create applications that are not only functional but also delightful to use.</p>
+          <p>I'm committed to writing clean, maintainable code and staying current with industry best practices.</p>
+        </div>
+        <div class="about-stats">
+          <div class="stat">
+            <h3>10+</h3>
+            <p>Projects Completed</p>
+          </div>
+          <div class="stat">
+            <h3>100%</h3>
+            <p>Client Satisfaction</p>
+          </div>
+          <div class="stat">
+            <h3>2+</h3>
+            <p>Years Experience</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <i class="fab fa-html5"></i>
+          <h3>Frontend</h3>
+          <p>HTML5, CSS3, JavaScript, Responsive Design</p>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-js-square"></i>
+          <h3>JavaScript</h3>
+          <p>ES6+, DOM Manipulation, Async/Await, APIs</p>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-code-branch"></i>
+          <h3>Version Control</h3>
+          <p>Git, GitHub, Collaborative Development</p>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-database"></i>
+          <h3>Backend Basics</h3>
+          <p>Node.js, Express.js, RESTful APIs</p>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>Responsive Design</h3>
+          <p>Mobile-First, Flexbox, CSS Grid</p>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-tools"></i>
+          <h3>Tools & More</h3>
+          <p>VS Code, Webpack, NPM, Problem Solving</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+            <i class="fas fa-cloud"></i>
+          </div>
+          <h3>Weather Application</h3>
+          <p>A real-time weather app that fetches data from a public API, displays current conditions, and 5-day forecasts. Built with vanilla JavaScript and modern CSS.</p>
+          <div class="tech-tags">
+            <span>JavaScript</span>
+            <span>API</span>
+            <span>CSS3</span>
+          </div>
+          <a href="#" class="project-link">View Project →</a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+            <i class="fas fa-calculator"></i>
+          </div>
+          <h3>Calculator App</h3>
+          <p>A fully functional calculator with a clean interface. Supports all basic operations and includes keyboard support for enhanced user experience.</p>
+          <div class="tech-tags">
+            <span>JavaScript</span>
+            <span>HTML5</span>
+            <span>CSS3</span>
+          </div>
+          <a href="#" class="project-link">View Project →</a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+            <i class="fas fa-tasks"></i>
+          </div>
+          <h3>Todo List Manager</h3>
+          <p>Interactive todo application with local storage persistence. Add, edit, delete, and mark tasks complete. Fully responsive design for all devices.</p>
+          <div class="tech-tags">
+            <span>JavaScript</span>
+            <span>LocalStorage</span>
+            <span>Responsive</span>
+          </div>
+          <a href="#" class="project-link">View Project →</a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+            <i class="fas fa-gamepad"></i>
+          </div>
+          <h3>Interactive Game</h3>
+          <p>A fun browser-based game built with JavaScript. Features smooth animations, score tracking, and difficulty levels for an engaging user experience.</p>
+          <div class="tech-tags">
+            <span>JavaScript</span>
+            <span>Canvas</span>
+            <span>Animation</span>
+          </div>
+          <a href="#" class="project-link">View Project →</a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+            <i class="fas fa-images"></i>
+          </div>
+          <h3>Image Gallery</h3>
+          <p>Beautiful image gallery with lightbox functionality. Responsive grid layout that adapts to all screen sizes with smooth transitions.</p>
+          <div class="tech-tags">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>Responsive</span>
+          </div>
+          <a href="#" class="project-link">View Project →</a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+          <h3>E-commerce Platform</h3>
+          <p>Product showcase website with shopping cart functionality. Features product filtering, dynamic pricing, and a responsive checkout experience.</p>
+          <div class="tech-tags">
+            <span>JavaScript</span>
+            <span>DOM</span>
+            <span>Responsive</span>
+          </div>
+          <a href="#" class="project-link">View Project →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">Let's Connect</h2>
+      <p class="contact-subtitle">I'm always open to new opportunities and interesting projects</p>
+      
+      <div class="contact-content">
+        <div class="contact-methods">
+          <div class="contact-method">
+            <i class="fas fa-envelope"></i>
+            <h3>Email</h3>
+            <a href="mailto:gnanasrivalli137@gmail.com">gnanasrivalli137@gmail.com</a>
+          </div>
+          <div class="contact-method">
+            <i class="fas fa-phone"></i>
+            <h3>Phone</h3>
+            <a href="tel:+918333065236">+91 8333065236</a>
+          </div>
+          <div class="contact-method">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Location</h3>
+            <p>India</p>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <h3>Follow Me</h3>
+          <div class="social-icons">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 MOLLETI GNANA SRIVALLI. All rights reserved.</p>
+      <p>Crafted with <span class="heart">❤</span> by Gnana Srivalli</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tony's Pizza Palace - Authentic Italian Pizza & Pasta</title>
+    <meta name="description" content="Tony's Pizza Palace - Serving authentic Italian pizza, pasta, and calzones to our local community since 1995. Order online for delivery or carryout!">
+    <link rel="stylesheet" href="pizza.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>🍕 Tony's Pizza Palace</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#order" class="nav-link">Order Online</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Authentic Italian Pizza Since 1995</h1>
+            <p>Hand-tossed pizzas, homemade pasta, and family recipes passed down through generations. Serving our community with love and flavor!</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">View Our Menu</a>
+                <a href="#order" class="btn btn-secondary">Order Online</a>
+            </div>
+            <div class="hero-features">
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <span>Fast Delivery</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-utensils"></i>
+                    <span>Fresh Ingredients</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-heart"></i>
+                    <span>Family Owned</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&h=400&fit=crop" alt="Delicious pepperoni pizza">
+        </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section class="specials">
+        <div class="container">
+            <h2>Today's Specials</h2>
+            <div class="specials-grid">
+                <div class="special-card">
+                    <div class="special-badge">Limited Time</div>
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=300&h=200&fit=crop" alt="Family meal deal">
+                    <div class="special-content">
+                        <h3>Family Feast Deal</h3>
+                        <p>Large pizza, pasta, salad & garlic bread</p>
+                        <div class="special-price">
+                            <span class="original">$45.99</span>
+                            <span class="discounted">$32.99</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="special-card">
+                    <div class="special-badge">Student Special</div>
+                    <img src="https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?w=300&h=200&fit=crop" alt="Student pizza deal">
+                    <div class="special-content">
+                        <h3>Student Supreme</h3>
+                        <p>Medium pizza with valid student ID</p>
+                        <div class="special-price">
+                            <span class="original">$18.99</span>
+                            <span class="discounted">$14.99</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="special-card">
+                    <div class="special-badge">Weekend Deal</div>
+                    <img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=300&h=200&fit=crop" alt="Weekend pasta special">
+                    <div class="special-content">
+                        <h3>Pasta Night</h3>
+                        <p>Any pasta + salad + breadsticks</p>
+                        <div class="special-price">
+                            <span class="original">$22.99</span>
+                            <span class="discounted">$16.99</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <p>Fresh ingredients, traditional recipes, unforgettable taste</p>
+
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="pizzas">Pizzas</button>
+                <button class="category-btn" data-category="pastas">Pastas</button>
+                <button class="category-btn" data-category="appetizers">Appetizers</button>
+                <button class="category-btn" data-category="salads">Salads</button>
+                <button class="category-btn" data-category="beverages">Beverages</button>
+            </div>
+
+            <div class="menu-items">
+                <!-- Pizzas -->
+                <div class="menu-category active" id="pizzas">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h3>Margherita</h3>
+                            <p>Fresh mozzarella, tomato sauce, basil</p>
+                        </div>
+                        <div class="item-sizes">
+                            <span>Small: $12.99</span>
+                            <span>Large: $18.99</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h3>Pepperoni</h3>
+                            <p>Pepperoni, mozzarella, tomato sauce</p>
+                        </div>
+                        <div class="item-sizes">
+                            <span>Small: $14.99</span>
+                            <span>Large: $21.99</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h3>Supreme</h3>
+                            <p>Pepperoni, sausage, mushrooms, peppers, onions</p>
+                        </div>
+                        <div class="item-sizes">
+                            <span>Small: $16.99</span>
+                            <span>Large: $24.99</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h3>Meat Lovers</h3>
+                            <p>Pepperoni, sausage, ham, bacon, meatballs</p>
+                        </div>
+                        <div class="item-sizes">
+                            <span>Small: $17.99</span>
+                            <span>Large: $26.99</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h3>Veggie Delight</h3>
+                            <p>Mushrooms, peppers, onions, olives, tomatoes</p>
+                        </div>
+                        <div class="item-sizes">
+                            <span>Small: $15.99</span>
+                            <span>Large: $22.99</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pastas -->
+                <div class="menu-category" id="pastas">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h3>Spaghetti Carbonara</h3>
+                            <p>Creamy sauce with pancetta and parmesan</p>
+                        </div>
+                        <div class="item-price">$16.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h3>Fettuccine Alfredo</h3>
+                            <p>Creamy parmesan sauce with fettuccine</p>
+                        </div>
+                        <div class="item-price">$15.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h3>Lasagna</h3>
+                            <p>Layers of pasta, meat sauce, ricotta, mozzarella</p>
+                        </div>
+                        <div class="item-price">$18.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h3>Penne Vodka</h3>
+                            <p>Pink vodka sauce with penne pasta</p>
+                        </div>
+                        <div class="item-price">$16.99</div>
+                    </div>
+                </div>
+
+                <!-- Appetizers -->
+                <div class="menu-category" id="appetizers">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h3>Garlic Bread</h3>
+                            <p>Fresh bread with garlic butter and herbs</p>
+                        </div>
+                        <div class="item-price">$6.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h3>Mozzarella Sticks</h3>
+                            <p>Crispy breaded mozzarella with marinara</p>
+                        </div>
+                        <div class="item-price">$8.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h3>Chicken Wings</h3>
+                            <p>8 pieces with your choice of sauce</p>
+                        </div>
+                        <div class="item-price">$12.99</div>
+                    </div>
+                </div>
+
+                <!-- Salads -->
+                <div class="menu-category" id="salads">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h3>Caesar Salad</h3>
+                            <p>Romaine, croutons, parmesan, caesar dressing</p>
+                        </div>
+                        <div class="item-price">$9.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h3>Greek Salad</h3>
+                            <p>Mixed greens, feta, olives, tomatoes, cucumber</p>
+                        </div>
+                        <div class="item-price">$10.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h3>Caprese Salad</h3>
+                            <p>Tomatoes, mozzarella, basil, balsamic glaze</p>
+                        </div>
+                        <div class="item-price">$11.99</div>
+                    </div>
+                </div>
+
+                <!-- Beverages -->
+                <div class="menu-category" id="beverages">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h3>Coca-Cola Products</h3>
+                            <p>Coke, Diet Coke, Sprite, Orange, Root Beer</p>
+                        </div>
+                        <div class="item-price">$2.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h3>Craft Beer</h3>
+                            <p>Local craft beers on tap</p>
+                        </div>
+                        <div class="item-price">$5.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h3>Italian Soda</h3>
+                            <p>Assorted flavors with cream</p>
+                        </div>
+                        <div class="item-price">$3.99</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Our Family Story</h2>
+                    <p>Tony's Pizza Palace was founded in 1995 by Tony Marino, an Italian immigrant who brought authentic recipes from his hometown in Naples. What started as a small takeout operation has grown into a beloved community gathering place.</p>
+                    <p>Today, Tony's sons Mario and Luigi continue the tradition, using the same family recipes and commitment to quality that made our pizza famous. Every pizza is hand-tossed, every sauce is homemade, and every customer is treated like family.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>29+</h3>
+                            <p>Years Serving</p>
+                        </div>
+                        <div class="stat">
+                            <h3>50K+</h3>
+                            <p>Pizzas Made</p>
+                        </div>
+                        <div class="stat">
+                            <h3>1000+</h3>
+                            <p>Happy Families</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=500&h=400&fit=crop" alt="Tony's family making pizza">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Online Section -->
+    <section id="order" class="order">
+        <div class="container">
+            <h2>Order Online</h2>
+            <p>Easy online ordering with fast delivery or convenient carryout</p>
+
+            <div class="order-options">
+                <div class="order-card">
+                    <i class="fas fa-truck"></i>
+                    <h3>Delivery</h3>
+                    <p>Hot, fresh pizza delivered to your door within 45 minutes</p>
+                    <div class="delivery-zones">
+                        <p><strong>Zone 1:</strong> Free delivery</p>
+                        <p><strong>Zone 2:</strong> $2.99 delivery</p>
+                        <p><strong>Zone 3:</strong> $4.99 delivery</p>
+                    </div>
+                    <button class="btn btn-primary" onclick="showOrderModal('delivery')">Order for Delivery</button>
+                </div>
+
+                <div class="order-card">
+                    <i class="fas fa-store"></i>
+                    <h3>Carryout</h3>
+                    <p>Pick up your hot, fresh pizza ready when you arrive</p>
+                    <p class="carryout-info">Call ahead for faster service!</p>
+                    <button class="btn btn-primary" onclick="showOrderModal('carryout')">Order for Carryout</button>
+                </div>
+
+                <div class="order-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Catering</h3>
+                    <p>Perfect for parties, events, and large groups</p>
+                    <ul class="catering-options">
+                        <li>Party trays available</li>
+                        <li>Serves 10-50 people</li>
+                        <li>Delivery available</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="showOrderModal('catering')">Catering Quote</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Visit Us Today</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <h3>📍 Location</h3>
+                        <p>456 Main Street<br>Downtown District<br>City, State 12345</p>
+                        <a href="#" class="btn btn-secondary">Get Directions</a>
+                    </div>
+                    <div class="info-item">
+                        <h3>🕒 Hours</h3>
+                        <p><strong>Monday - Thursday:</strong> 11:00 AM - 10:00 PM<br>
+                        <strong>Friday - Saturday:</strong> 11:00 AM - 11:00 PM<br>
+                        <strong>Sunday:</strong> 12:00 PM - 9:00 PM</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>📞 Phone</h3>
+                        <p>(555) 123-PIZZA<br>(555) 123-7499</p>
+                        <p class="call-now">Call now for fastest service!</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>📧 Email</h3>
+                        <p>orders@tonyspizzapalace.com</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Quick Contact</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="contactName" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="contactPhone" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="contactType" required>
+                                <option value="">How can we help?</option>
+                                <option value="order">Place an Order</option>
+                                <option value="catering">Catering Inquiry</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="contactMessage" placeholder="Your message..." rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Tony's Pizza Palace</h3>
+                    <p>Authentic Italian pizza since 1995. Serving our community with love and flavor!</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#home">Home</a>
+                    <a href="#menu">Menu</a>
+                    <a href="#about">About</a>
+                    <a href="#order">Order Online</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <a href="#order">Delivery</a>
+                    <a href="#order">Carryout</a>
+                    <a href="#order">Catering</a>
+                    <a href="#order">Party Trays</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tony's Pizza Palace. All rights reserved. | Made with ❤️ for our community</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Order Modal -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="orderModalTitle">Place Your Order</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="order-summary">
+                    <h3>Your Order</h3>
+                    <div id="orderItems" class="order-items">
+                        <p class="empty-order">No items selected yet. Add items from our menu!</p>
+                    </div>
+                    <div class="order-total">
+                        <strong>Total: $<span id="orderTotal">0.00</span></strong>
+                    </div>
+                </div>
+
+                <div class="customer-info">
+                    <h3>Customer Information</h3>
+                    <form id="orderForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="orderName" placeholder="Full Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="orderPhone" placeholder="Phone Number" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="orderEmail" placeholder="Email (optional)">
+                        </div>
+                        <div class="form-group" id="addressField">
+                            <input type="text" id="orderAddress" placeholder="Delivery Address">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="orderNotes" placeholder="Special instructions..." rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Place Order</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Order Confirmed!</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Thank you for your order! We'll contact you shortly to confirm details.</p>
+                <div id="orderConfirmation"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification"></div>
+
+    <script src="pizza.js"></script>
+</body>
+</html>

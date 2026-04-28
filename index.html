@@ -1,18 +1,303 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Weather App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew Haven Coffee Shop - Local Coffee & Pastries</title>
+    <meta name="description" content="Welcome to Brew Haven, your neighborhood coffee shop serving premium coffee, fresh pastries, and a cozy atmosphere in downtown.">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>☕ Brew Haven</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-    <div class="container">
-        <h1>Weather Report</h1>
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Brew Haven</h1>
+            <p>Your neighborhood coffee shop serving premium coffee, fresh pastries, and a cozy atmosphere since 2018.</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">View Menu</a>
+                <a href="#contact" class="btn btn-secondary">Reserve Table</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600&h=400&fit=crop" alt="Cozy coffee shop interior">
+        </div>
+    </section>
 
-        <input type="text" id="city" placeholder="Enter city name">
-        <button onclick="getWeather()">Get Weather</button>
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <p>Freshly brewed coffee and handcrafted pastries made daily</p>
 
-        <div id="result"></div>
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="coffee">Coffee</button>
+                <button class="category-btn" data-category="pastries">Pastries</button>
+                <button class="category-btn" data-category="breakfast">Breakfast</button>
+                <button class="category-btn" data-category="lunch">Lunch</button>
+            </div>
+
+            <div class="menu-items">
+                <!-- Coffee Items -->
+                <div class="menu-category active" id="coffee">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h3>Espresso</h3>
+                            <p>Rich, bold shot of our signature espresso</p>
+                        </div>
+                        <div class="item-price">$3.50</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h3>Cappuccino</h3>
+                            <p>Espresso with steamed milk and foam</p>
+                        </div>
+                        <div class="item-price">$4.75</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h3>Latte</h3>
+                            <p>Smooth espresso with steamed milk</p>
+                        </div>
+                        <div class="item-price">$4.50</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h3>Cold Brew</h3>
+                            <p>Smooth, cold-brewed coffee served over ice</p>
+                        </div>
+                        <div class="item-price">$4.25</div>
+                    </div>
+                </div>
+
+                <!-- Pastries Items -->
+                <div class="menu-category" id="pastries">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h3>Croissant</h3>
+                            <p>Buttery, flaky French pastry</p>
+                        </div>
+                        <div class="item-price">$3.25</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h3>Blueberry Muffin</h3>
+                            <p>Fresh blueberries in moist muffin</p>
+                        </div>
+                        <div class="item-price">$3.75</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h3>Cinnamon Roll</h3>
+                            <p>Soft, gooey cinnamon roll with icing</p>
+                        </div>
+                        <div class="item-price">$4.50</div>
+                    </div>
+                </div>
+
+                <!-- Breakfast Items -->
+                <div class="menu-category" id="breakfast">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h3>Avocado Toast</h3>
+                            <p>Sourdough with avocado, tomato, and poached egg</p>
+                        </div>
+                        <div class="item-price">$9.50</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h3>Breakfast Burrito</h3>
+                            <p>Eggs, cheese, potatoes, and salsa in a tortilla</p>
+                        </div>
+                        <div class="item-price">$8.75</div>
+                    </div>
+                </div>
+
+                <!-- Lunch Items -->
+                <div class="menu-category" id="lunch">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h3>Grilled Cheese</h3>
+                            <p>Cheddar and swiss on sourdough</p>
+                        </div>
+                        <div class="item-price">$7.50</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h3>Turkey Club</h3>
+                            <p>Turkey, bacon, lettuce, tomato on toasted bread</p>
+                        </div>
+                        <div class="item-price">$10.25</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Our Story</h2>
+                    <p>Brew Haven was born from a passion for great coffee and community. Founded in 2018 by Sarah and Mike Johnson, we've been serving our neighborhood with premium coffee, fresh pastries, and a warm atmosphere that feels like home.</p>
+                    <p>Every morning, we source the finest beans from local roasters and bake our pastries fresh daily. Whether you're starting your day with a strong espresso or meeting friends for brunch, we're here to make your experience memorable.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p>Coffee Varieties</p>
+                        </div>
+                        <div class="stat">
+                            <h3>1000+</h3>
+                            <p>Happy Customers</p>
+                        </div>
+                        <div class="stat">
+                            <h3>5</h3>
+                            <p>Years Serving</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=500&h=400&fit=crop" alt="Coffee shop owners">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Visit Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <h3>📍 Location</h3>
+                        <p>123 Main Street<br>Downtown District<br>City, State 12345</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>🕒 Hours</h3>
+                        <p>Mon-Fri: 6:00 AM - 8:00 PM<br>Sat-Sun: 7:00 AM - 9:00 PM</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>📞 Phone</h3>
+                        <p>(555) 123-4567</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>📧 Email</h3>
+                        <p>hello@brewhaven.com</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Make a Reservation</h3>
+                    <form id="reservationForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" id="date" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="time" required>
+                                <option value="">Select Time</option>
+                                <option value="8:00">8:00 AM</option>
+                                <option value="9:00">9:00 AM</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="13:00">1:00 PM</option>
+                                <option value="14:00">2:00 PM</option>
+                                <option value="15:00">3:00 PM</option>
+                                <option value="16:00">4:00 PM</option>
+                                <option value="17:00">5:00 PM</option>
+                                <option value="18:00">6:00 PM</option>
+                                <option value="19:00">7:00 PM</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select id="partySize" required>
+                                <option value="">Party Size</option>
+                                <option value="1">1 Person</option>
+                                <option value="2">2 People</option>
+                                <option value="3">3 People</option>
+                                <option value="4">4 People</option>
+                                <option value="5">5+ People</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Reserve Table</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Brew Haven</h3>
+                    <p>Your neighborhood coffee destination since 2018.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#home">Home</a>
+                    <a href="#menu">Menu</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘 Facebook</a>
+                        <a href="#" class="social-link">📷 Instagram</a>
+                        <a href="#" class="social-link">🐦 Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Brew Haven Coffee Shop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Reservation Confirmed!</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Thank you for your reservation! We'll send a confirmation email shortly.</p>
+                <p id="reservationDetails"></p>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
